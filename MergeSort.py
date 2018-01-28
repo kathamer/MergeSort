@@ -6,6 +6,9 @@ by Dylan Hamer
 
 from Data import generateSample  # Generate large sample datasets on the fly for testing
 
+arraySize = 10  # Size of sample array
+arrayMax = 100  # Maximum random value permittable in array
+
 """Main mergesort function"""
 def mergeSort(array):
     if len(array) == 1:  # If the array has been fully sorted,
@@ -37,7 +40,7 @@ def merge(firstArray, secondArray):
 
 """Main function"""
 def main():
-    sampleDataset = generateSample(size=1000000, maximumValue=50000)
+    sampleDataset = generateSample(size=arraySize, maximumValue=arrayMax)
     sortedDataset = mergeSort(sampleDataset)
     print("Original: {}".format(sampleDataset))
     print("Sorted: {}".format(sortedDataset))
