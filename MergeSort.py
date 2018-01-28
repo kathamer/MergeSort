@@ -8,10 +8,9 @@ from Data import generateSample  # Generate large sample datasets on the fly for
 
 """Main mergesort function"""
 def mergeSort(array):
-    print(array)
     if len(array) == 1:  # If the array has been fully sorted,
         return(array)  # Return it so we don't get stuck in an infinite loop
-#    print(
+    
     # First we need to split the array into two halves,
     arrayMiddle = int(round(len(array)/2))  # Middle index of array
     arrayLeft = array[:arrayMiddle]  # Left half of array
@@ -24,7 +23,6 @@ def mergeSort(array):
 
 """Merge two arrays"""
 def merge(firstArray, secondArray):
-#    print("Merging...")
     temporaryArray = []  # Temporary array to sort into
     while firstArray and secondArray:  # Loop until both arrays are empty
         if firstArray[0] > secondArray[0]:  # If the the first element of the first array is greater than the first element of the second array,
